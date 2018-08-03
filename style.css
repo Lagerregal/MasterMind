@@ -1,0 +1,30 @@
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+body {
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.row {
+    border: solid 1px #000000;
+    margin: 0 auto 20px auto;
+    width: 1000px;
+}
+
+.field {
+    background: #c8c8c8;
+    float: left;
+    border: solid aqua 1px;
+    height: 100px;
+    width: 248px;
+}
