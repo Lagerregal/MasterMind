@@ -38,4 +38,17 @@ MasterMind.ColorHelper = function () {
     this.getRandomColor = function () {
         return this.colors[Math.floor(Math.random() * 6)];
     };
+
+    /**
+     * @param {string[]} sourceArray
+     * @return {string[]}
+     */
+    this.shuffleAndCopyArray = function (sourceArray) {
+        var newArray = [];
+        for (var i = 0; i < sourceArray.length; i++) {
+            newArray.push(sourceArray[i]);
+        }
+        newArray.sort(function() { return 0.5 - Math.random() });
+        return newArray;
+    }
 };

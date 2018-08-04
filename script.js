@@ -18,12 +18,16 @@ $( document ).ready(function() {
         ai.setMainRow(mainColors);
 
         var round = 0;
-        while (round < 12 && !ai.hasWon()) {
+        while (round < 99999 && !ai.hasWon()) {
             uiHelper.setRowColors($wrapper.find('.ai-row-' + round), ai.playRound(round));
             round++;
         }
         if (ai.hasWon()) {
-            alert('Won!');
+            var text = 'Loose!';
+            if (round <= 10) {
+                text = 'Won!';
+            }
+            alert(text + ' (Round ' + (round) + ')');
         }
     });
 });
